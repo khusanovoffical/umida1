@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siz uchun maxsus</title>
+ <link rel="stylesheet" href="STYLE.CSS">
+</head>
+<body>
+
+    <div id="welcome-overlay">
+        <div id="welcome-text">BUNI CHALA DASTURCHI YARATDI😎
+            <br> <span> XUMOYUN</span>
+        </div>
+        <button id="ok-btn">OK</button>
+    </div><audio id="background-audio" loop>
+        <source src="musiqa.mp3" type="audio/mpeg">
+    </audio>
+
+   
+    <div id="hint">Ekranga bosing...</div>
+    <div id="heart-text">UMIDA🖤🤍</div>
+    <canvas id="particleCanvas"></canvas>
+
+   
+</body>
+</html>
+    <script src="SCRIPT.JS"> </script>
+     <script>
+        // Sayt elementini va audioni ushlab olamiz
+        const audio = document.getElementById('background-audio');
+
+        // Foydalanuvchi ekranga bir marta bossa, musiqa chalinadi
+        document.addEventListener('click', function() {
+            audio.play().catch(error => {
+                console.log("Avtomatik ijro brauzer tomonidan bloklandi, harakat qayta urinib ko'rilmoqda.");
+            });
+        }, { once: true }); // { once: true } — bu kod faqat bir marta, birinchi bosishda ishlaydi
+    </script>
+
+</html>
